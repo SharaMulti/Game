@@ -18,7 +18,6 @@ class  Character{
     {
       case 1:
       CType = "Chef: ";
-      LUse = 10;
       CType = "chef";
       Life = 6;
       break;
@@ -99,6 +98,7 @@ switch(Intro)
   case 2: //Increases health by 1
   cout << "You stop the cleric dead in ikts tracks by grabbing him by the shoulder, he seems startled, as he turned around with a surprised expression, but quickly shoves you off \n";
   cout << "\n";
+  
 
   cout << "-May the Gods bless you-\n";
   cout << "\n";
@@ -358,37 +358,91 @@ switch (Intro)
 }
 
 cout << "You go to the next hallway, this one being somewhat different from the one you were before, in here, there is a staircase that goes down, and another one that goes up, as well as a room with a open cell door\n";
-cout << "";
-cout << "Go upstairs (1)";
-cout << "Go downstairs (2)";
-cout << "Go through the cell door (3)";
+cout << "\n";
+cout << "Go upstairs (1)\n";
+cout << "Go downstairs (2)\n";
+cout << "Go through the cell door (3)\n";
 cin.clear();
 cin >> Intro;
 
 switch (Intro)
 {
 case 1:
-cout << "You set your sights up the thick staircase, aand begin to head up it to the second floor of the castle";
+cout << "You set your sights up the thick staircase, aand begin to head up it to the second floor of the castle\n";
 break;
 case 2:
-cout << "You decide to go downstairs, as you go downstairs, you hear whispering and occassinal crying, as you reach the end of the stairs, you see around a near full jail of people of all kinds, but most of them seem to be either commoners, or... royal knights, they are battered and bruised, filled of cuts and bandages, they seem recent too";
+cout << "You decide to go downstairs, as you go downstairs, you hear whispering and occassinal crying, as you reach the end of the stairs, you see around a near full jail of people of all kinds, but most of them seem to be either commoners, or... royal knights, they are battered and bruised, filled of cuts and bandages, they seem recent too\n";
 if (player.getCType() == "chef")
 {
-  cout << "You decide to quickly tail out, the smell was pungeant, and it nearly made you gag, but most importantly, you brush off that imagine from your mind";
+  cout << "You decide to quickly tail out, the smell was pungeant, and it nearly made you gag, but most importantly, you brush off that imagine from your mind\n";
 }
 if (player.getCType() == "maid")
 {
-  cout << "You stare at them in different states of pain, yet you remain unbothered, you had to come here often, usually, for body disposal, so you leave the room after turning around";
+  cout << "You stare at them in different states of pain, yet you remain unbothered, you had to come here often, usually, for body disposal, so you leave the room after turning around\n";
 }
 if (player.getCType() == "guard") //heal 1
 {
-  cout << "You walk closer to the bars of a cell, the prison stares at you with blood all over his mouth and broken nose, layingon the floor, wearing the same kind of armor as you, you stare down to him, and remind yourself of what had happened...herecy, but with all that is going on, you start to doubt yourself, you leave the room, making a nod at the priosn who you stared at";
+  cout << "You walk closer to the bars of a cell, the prison stares at you with blood all over his mouth and broken nose, layingon the floor, wearing the same kind of armor as you, you stare down to him, and remind yourself of what had happened...herecy, but with all that is going on, you start to doubt yourself, you leave the room, making a nod at the priosn who you stared at\n";
 }
 break;
 case 3:
-cout << "You go through the cell door, as you ";
+cout << "You go through the cell door, as you observe tons and tons of what appear to be file cabinets and crates, as you notice they appear to be, evidence from crimes\n";
+if (player.getCType() == "chef")
+{
+cout << "You decide to snoop around for a bit, and find what appeared to be the case of a mass murder by food poisoning, it seems they were cooking rat meat and selling it as normal meals, which makes you feel weird after reading, so you go backstairs\n";
+}
+if (player.getCType() == "maid")
+{
+  cout << "You begin to peek all around the room, as you find a case that called your eye, the file reads that a royal maid was severed into several pieces by seemingly a crazed guard group, the body has not been found, and no culprit was ever taken, this was written around 4 days ago, you leave with a bitter taste in your mouth\n";
+}
+if (player.getCType() == "guard")
+{
+  cout << "You start to browse the files from around the date you joined the royal guard, and you find the file you were looking for, it tells the story of a man with a metalic glove murdering cold blooded a high amount of civilians and guards in a fit of rage, he was aprehended and taken to the royal cells, you stare at the paper for a while, and decide to fold it and pocket it for you\n";
+}
+break;
 }
 
+cout << "As you reach the upstairs, you are greeted by a hallway with a long row of doors, some being made of different materials, and at the end of the hallway, there lies a metal bar door, the doors across the hallway are all of different types, and to the other side, windows leading outside, you are able to see the sun is setting at the moment\n";
+cout << "\n";
+cout << "Go to the cell door (1)\n";
+cout << "Go through the boreal wood door (2)\n";
+cout << "Go through the old wooden door (3)\n";
+cout << "Go through the metal door (4)\n";
+cout << "Go through...another, cell door (5)\n";
+cin.clear();
+cin >> Intro;
+
+switch (Intro)
+{
+  case 1:
+  cout << "You stare at the doors, while they are all different and they call your attention, you feel like watching the sundown";
+  break;
+  case 2:
+  cout << "When you open the door, it doesn't even creak, it seems well kept, as inside, you see why, it being non other than the king's bedroom, you can barely contain a smile, you think to yourself that in here out of all placed, you will find what you will need, or at least some lead to the investigation, the room has inside a big balcony with a glass door, a really big bed with yellow and red sheets and pillows, as well as a large carpet that fills the room, a couple bireal dressers and nightsands, itis a cozy room, but feels a bit overly riched out";
+  if (player.getCType() == "chef")
+  {
+    cout << "What you find inside is that the king has been eating a lot, food carts are strewn about throughout all the room, with empty plates and glassess all over, what was he eating, you can't tell, but this is certainly not normal behaviour of the king";
+  }
+  if (player.getCType() == "maid")
+  {
+    cout << "You are not the designated maid for this room, you think you know the one who was meant to clean this room, but the room is entirely a mess, however, you do know where someone would hide their secrets, you began to check under mattress, and you quickly find the secret you were expecting, it was a bag of a sort of purple dust, it smells poisonous... ";
+  }
+  if (player.getCType() == "guard")
+  {
+    cout << "You look around the room really quickly, you have never been inside this room, usually outside of it, as you inspect everything in a quick manner, you probably missed somethings, but the thing you do find, was a couple notes inside a drawer that said something related to firing you ...today";
+  }
+  break;
+  case 3:
+  cout << "As you open the old wooden door, it creaks loudly, so you just open it halfway, as you peek in between the door gap, you notice it looks like a cell for a child, it doesn't have any wooden walls like the others, no cute flooring, it simply had a wooden bed with hay, a filled toy box, and shackles on the wall with no windows, you're not quite sure what to make of this room, but could it be related to the prince's going missing";
+  break;
+  case 4:
+  cout << "Before you open the metal door, it opens on its own, and a woman with butcher clothing is there, holding a bloody bag";
+  cout << "";
+  cout << "-Screw off, im not serving clients at the moment, go see Terro at the first floor-";
+  cout << "";
+  cout << "She bumped into your shoulder with anger, as you look inside the room, it seems the room has a white porcelean for floor and walls, abut they are covered in blood, as well as a single bed thats oddly wiped clean, a desk and chair, as well as another metal door that's under a really big lock";
+  
+}
 
 
 
