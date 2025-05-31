@@ -220,125 +220,176 @@ cout << "\n";
   }
   break;
   case 3:
-  cout << "You enter the library, inside you are quickly greeted by floating objects all around, these hover up and down in a whimsical manner, as you are mesmerized by the perfroamcne, you are quickly interrupted";
-  cout << "";
-  cout << "-Welcome to the library!, broswing for anything in specific?-";
-  cout << "";
-  cout << "A red haired wizard in blue robes is floating nearby you, as he asks you the question, you answer that you're looking for a reason for the king to need clerics";
-  cout << "";
+  cout << "You enter the library, inside you are quickly greeted by floating objects all around, these hover up and down in a whimsical manner, as you are mesmerized by the perfroamcne, you are quickly interrupted\n";
+  cout << "\n";
+  cout << "-Welcome to the library!, broswing for anything in specific?-\n";
+  cout << "\n";
+  cout << "A red haired wizard in blue robes is floating nearby you, as he asks you the question, you answer that you're looking for a reason for the king to need clerics\n";
+  cout << "\n";
   if (player.getCType() == "chef")
   {
-    cout << "-Of course!, he's prepraing a banqeut for all of them, after all, since the prince went missing, he has been obsessed with them-";
-    cout << "";
-    cout << "You leave after thanking him for the information";
+    cout << "-Of course!, he's prepraing a banqeut for all of them, after all, since the prince went missing, he has been obsessed with them-\n";
+    cout << "\n";
+    cout << "You leave after thanking him for the information\n";
   }
   if (player.getCType() == "maid")
   {
-    cout << "-Aiming for a promotion?, well you should not worry about such trivialities, you're a maid after all, i would advsie you that you leave the castle before the morning of tomorrow-";
-    cout << "";
-    cout << "You felt shivers go down your spine as he said that, the happy tone of his voice made it uncanny, but you vow and leave";
+    cout << "-Aiming for a promotion?, well you should not worry about such trivialities, you're a maid after all, i would advsie you that you leave the castle before the morning of tomorrow-\n";
+    cout << "\n";
+    cout << "You felt shivers go down your spine as he said that, the happy tone of his voice made it uncanny, but you vow and leave\n";
   }
   if (player.getCType() == "guard")
   {
-    cout << "-Guess the king didn't told you, he's is considering seizeing power of the island, you know that after the civil war, only Goblins and Orcs remained from the others, Dragokul is not entirely pleased with that outcome, so he has decided to make his rule absolute, i would advsie you stop him... but i'm afraid it might too late-";
-    cout << "";
-    cout << "Your body froze in place for a moment, as you simply look down to your feet, and walk back the way you came";
+    cout << "-Guess the king didn't told you, he's is considering seizeing power of the island, you know that after the civil war, only Goblins and Orcs remained from the others, Dragokul is not entirely pleased with that outcome, so he has decided to make his rule absolute, i would advsie you stop him... but i'm afraid it might too late-\n";
+    cout << "\n";
+    cout << "Your body froze in place for a moment, as you simply look down to your feet, and walk back the way you came\n";
   }
   break;
   case 4:
   if (player.getCType() == "chef") //damage 1
   {
-    cout << "You remember entering here when you needed meat, as you open the metallic door, a cold chill washed over you instantly, you are unable to enter the cold storage, as it was unnaturaly cold, you quickly close the door, and shiver as you walk away";
+    cout << "You remember entering here when you needed meat, as you open the metallic door, a cold chill washed over you instantly, you are unable to enter the cold storage, as it was unnaturaly cold, you quickly close the door, and shiver as you walk away\n";
   }
   if (player.getCType() == "maid")
   {
-    cout << "You freeze a bit before opening the cold storage door, as you suddenly open, you know where to look somehow, as you check behind the metallic meat crates, you find what you were trying to find, the corpse of another maid who had been severed gods know how long ago, you quickly read a note in what remains of her dress";
-    cout << "";
-    cout << "It reads: The lords have turned a blind eye on us, it is not safe anymore, Dragokul has shown its true colors, his reasonings, and we applaud him for it, well i won't, i will make my escape at dawn, an-";
-    cout << "";
-    cout << "The note has been thorn off, you take asigh, and get out of the cold storage, leaveing the note where you found it";
+    cout << "You freeze a bit before opening the cold storage door, as you suddenly open, you know where to look somehow, as you check behind the metallic meat crates, you find what you were trying to find, the corpse of another maid who had been severed gods know how long ago, you quickly read a note in what remains of her dress\n";
+    cout << "\n";
+    cout << "It reads: The lords have turned a blind eye on us, it is not safe anymore, Dragokul has shown its true colors, his reasonings, and we applaud him for it, well i won't, i will make my escape at dawn, an-\n";
+    cout << "\n";
+    cout << "The note has been thorn off, you take asigh, and get out of the cold storage, leaveing the note where you found it\n";
   } 
   if (player.getCType() == "guard") //damgae 1
   {
-cout << "You open the door with confidense, as you walk in, the metal door closes behind you, as you begin to search all around as uickly as you could, you're unable to bear the cold for this long, so you rush outside, but before that, you managed to see what appeared to be, someones foot?";
+cout << "You open the door with confidense, as you walk in, the metal door closes behind you, as you begin to search all around as quickly as you could, you're unable to bear the cold for this long, so you rush outside, but before that, you managed to see what appeared to be, someones foot?\n";
   }
   break;
   case 5:
-  cout << "You decide to check the infirmary, or at least, the one at the bottom floor, as you open the door, you are greeted by a empty room filled with beds and blood all across the floor, it is not particullary a good smell";
+  cout << "You decide to check the infirmary, or at least, the one at the bottom floor, as you open the door, you are greeted by a empty room filled with beds and blood all across the floor, it is not particullary a good smell\n";
   if (player.getCType() == "maid") //damage 1
   {
-    cout << "You feel disgusted insatntly seeing the place, you uickly bring the utensils neccesarry to clean form the storage at the front, and begin to clean, you however, were too focused on cleaning, you didn't notice anything, and you feel quite tired";
+    cout << "You feel disgusted insatntly seeing the place, you uickly bring the utensils neccesarry to clean form the storage at the front, and begin to clean, you however, were too focused on cleaning, you didn't notice anything, and you feel quite tired\n";
   }
   break;
 }
 
-cout << "You enter the banquet hall tall dark wood doors, as you head inside, you see a large table strewn across the large room with at least 14 chairs all across it, a giant golden and glass chandelier hanging over the middle of the room, as the table has a red cover on top of it, but no dishes, you begin to wonder your next move";
-cout << "";
-cout << "Head back to the other side of the castle (1)";
-cout << "Inspect the room more (2)";
-cout << "Enter the kitchen (3)";
-cout << "Look outside 4";
+cout << "You enter the banquet hall tall dark wood doors, as you head inside, you see a large table strewn across the large room with at least 14 chairs all across it, a giant golden and glass chandelier hanging over the middle of the room, as the table has a red cover on top of it, but no dishes, you begin to wonder your next move\n";
+cout << "\n";
+cout << "Head back to the other side of the castle (1)\n";
+cout << "Inspect the room more (2)\n";
+cout << "Enter the kitchen (3)\n";
+cout << "Look outside 4\n";
 cin.clear();
 cin >> Intro;
 
 switch (Intro)
 {
   case 1:
-  cout << "You take a sigh, and turn 180 degrees, as you begin to walk back to the throne room, there is another hallway across from it like his one, as you walk, you wonder who the hell designed this place";
+  cout << "You take a sigh, and turn 180 degrees, as you begin to walk back to the throne room, there is another hallway across from it like his one, as you walk, you wonder who the hell designed this place\n";
   break;
   case 2:
-  cout << "You look around the room, mostly under the table, it is probably the most clean room in the entire castle, you think on what a good job the maids and butlers do to keep this place clean, but far from it, its nothing worthy";
+  cout << "You look around the room, mostly under the table, it is probably the most clean room in the entire castle, you think on what a good job the maids and butlers do to keep this place clean, but far from it, its nothing worthy\n";
   if (player.getCType() == "maid") // damage 1
   {
-    cout << "As you finish inspecting, your breathing becomes agitated, you remember a few years ago looking under the table, and seeing a butler crushed under rubble in this very room, you shake that feeling quickly, and walk out quickly";
+    cout << "As you finish inspecting, your breathing becomes agitated, you remember a few years ago looking under the table, and seeing a butler crushed under rubble in this very room, you shake that feeling quickly, and walk out quickly\n";
   }
   break;
   case 3:
-  cout << "You decide to enter the kitchen, and think taht it is redundtant to have 2 kitchens, this one is by far larger than the one near the entrance,  having way more rows of stoves and shelves with even more dry foods, you look around, and find not much of note in this place, except that most foods are actually desserts, or materials for desserts";
+  cout << "You decide to enter the kitchen, and think taht it is redundtant to have 2 kitchens, this one is by far larger than the one near the entrance,  having way more rows of stoves and shelves with even more dry foods, you look around, and find not much of note in this place, except that most foods are actually desserts, or materials for desserts\n";
   if (player.getCType() == "chef") // heal 1
   {
-    cout << "You have good memories of this place, this is where you took the exam that allowed you to take this job, after all, you were here yesterday!, you leave the room with a big smile across your face";
+    cout << "You have good memories of this place, this is where you took the exam that allowed you to take this job, after all, you were here yesterday!, you leave the room with a big smile across your face\n";
   }
   break;
   case 4:
-  cout << "You look through one of the 2 windows in this room, you gaze into the desne and thick forest that surrounds the castle, something you notice however, are what seem to be shadows of people near the tree branches, not moving, and wearing all kinds of clothes, you think about the civil war, and leave";
+  cout << "You look through one of the 2 windows in this room, you gaze into the desne and thick forest that surrounds the castle, something you notice however, are what seem to be shadows of people near the tree branches, not moving, and wearing all kinds of clothes, you think about the civil war, and leave\n";
   break;
 }
 
-cout << "You get to the throne room, in here, you notice a different cleric than the one at the entrance is walking back and forth, pondering something";
-cout << "";
-cout << "Walk past him (1)";
-cout << "Interrupt his thinking (2)";
-cout << "Tell him to leave (3)";
+cout << "You get to the throne room, in here, you notice a different cleric than the one at the entrance is walking back and forth, pondering something\n";
+cout << "\n";
+cout << "Walk past him (1)\n";
+cout << "Interrupt his thinking (2)\n";
+cout << "Tell him to leave (3)\n";
 cin.clear();
 cin >> Intro;
 
 switch (Intro)
 {
   case 1:
-  cout << "You simply ignore him, you also think to yourself that annoy his pondering might anger him";
+  cout << "You simply ignore him, you also think to yourself that annoy his pondering might anger him\n";
   break;
   case 2:
-  cout << "You poke his shoulder, and he looks up to you, for a moment";
-  cout << "";
-  cout << "-Oh, excuse me, i don't thinmk the king has arrived, i apologize if i am being a inconvinience-";
-  cout << "";
+  cout << "You poke his shoulder, and he looks up to you, for a moment\n";
+  cout << "\n";
+  cout << "-Oh, excuse me, i don't think the king has arrived, i apologize if i am being a inconvinience-\n";
+  cout << "\n";
   if (player.getCType() == "chef")
   {
-    cout << "You nod happily, and you tell him that he is welcome to wait for the king to return";
+    cout << "You nod happily, and you tell him that he is welcome to wait for the king to return\n";
   }
   if (player.getCType() == "maid")
   {
-    cout << "You tell him that he is welcome to stay, but you simply dismiss him and wlak away, you don't seem interested with him, nor does he";
+    cout << "You tell him that he is welcome to stay, but you simply dismiss him and wlak away, you don't seem interested with him, nor does he\n";
   }
   if (player.getCType() == "guard")
   {
-    cout << "You nod towards him, as he seems a bit, surprised, it seems that he wasn't expecting you to understand, which is a bit concerning now that you think about it";
+    cout << "You nod towards him, as he seems a bit, surprised, it seems that he wasn't expecting you to understand, which is a bit concerning now that you think about it\n";
   }
   break;
   case 3:
-  cout << "You kindly tell him to leave, since not much of the staff is around, and that he is able to come back later";
+  cout << "You kindly tell him to leave, since not much of the staff is around, and that he is able to come back later\n";
+  if (player.getCType() == "chef")
+  {
+    cout << "-Oh?, oh no no you're mistaken i gotta wait for the king, but, thanks for your concern-\n";
+    cout << "\n";
+    cout << "He remains walking back and forth, ignoring your words\n";
+  }
+  if (player.getCType() == "maid") //damage 1
+  {
+    cout << "As if you were not there, the priest keeps walking bacj and forth, ignoring what you told him\n";
+  }
+  if (player.getCType() == "guard") // heal 1
+  {
+    cout << "-Huh?, oh, uhm, yes, of course, sorry for the trouble, i will be leaving inmeddiately...-\n";
+    cout << "\n";
+    cout << "He quickly vows towards your direction, and he walks rather quickly to the main gate\n";
+  }
+  break;
 }
+
+cout << "You go to the next hallway, this one being somewhat different from the one you were before, in here, there is a staircase that goes down, and another one that goes up, as well as a room with a open cell door\n";
+cout << "";
+cout << "Go upstairs (1)";
+cout << "Go downstairs (2)";
+cout << "Go through the cell door (3)";
+cin.clear();
+cin >> Intro;
+
+switch (Intro)
+{
+case 1:
+cout << "You set your sights up the thick staircase, aand begin to head up it to the second floor of the castle";
+break;
+case 2:
+cout << "You decide to go downstairs, as you go downstairs, you hear whispering and occassinal crying, as you reach the end of the stairs, you see around a near full jail of people of all kinds, but most of them seem to be either commoners, or... royal knights, they are battered and bruised, filled of cuts and bandages, they seem recent too";
+if (player.getCType() == "chef")
+{
+  cout << "You decide to quickly tail out, the smell was pungeant, and it nearly made you gag, but most importantly, you brush off that imagine from your mind";
+}
+if (player.getCType() == "maid")
+{
+  cout << "You stare at them in different states of pain, yet you remain unbothered, you had to come here often, usually, for body disposal, so you leave the room after turning around";
+}
+if (player.getCType() == "guard") //heal 1
+{
+  cout << "You walk closer to the bars of a cell, the prison stares at you with blood all over his mouth and broken nose, layingon the floor, wearing the same kind of armor as you, you stare down to him, and remind yourself of what had happened...herecy, but with all that is going on, you start to doubt yourself, you leave the room, making a nod at the priosn who you stared at";
+}
+break;
+case 3:
+cout << "You go through the cell door, as you ";
+}
+
+
 
 
 
