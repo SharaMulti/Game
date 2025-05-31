@@ -441,7 +441,51 @@ switch (Intro)
   cout << "-Screw off, im not serving clients at the moment, go see Terro at the first floor-";
   cout << "";
   cout << "She bumped into your shoulder with anger, as you look inside the room, it seems the room has a white porcelean for floor and walls, abut they are covered in blood, as well as a single bed thats oddly wiped clean, a desk and chair, as well as another metal door that's under a really big lock";
+  if (player.getCType() == "guard")
+  {
+    cout << "You don't pay mind to her bumping into you, you just stare blankly at the empty bed, something about it still makes you feel uneasy";
+  }
+  break;
+  case 5://damage to all 1
+  cout << "You peek through the cell bars to see whats behind, it's a giant gold pile sitting there, this must be the treasure room, further in, chests of all kinds and loot layed out free for the taking, you bump into the metal as you try to pen the door, it's locked";
+  break;
+  }
+
+  cout << "You go upstairs, it is a closed off space with a spiraling staricase as if of a tower, as you walk up the stone staircase, you are met with another door, this one of wood, you open it, and are presented with a beautiful orange and black sky, as night is coming in";
+  cout << "";
+  cout << "Go back down to the throne room (1)";
+  cout << "Go close to the edge (2)";
+  cout << "Watch the sky turn dark (3)";
+  cin.clear();
+cin >> Intro;
+
+switch (Intro)
+{
+  case 1:
+  cout << "You take a deep breath, you needed some fresh air after all the walking you have been doing nearly non stop, you exhale, and begin to make your way back";
+  break;
+  case 2: 
+  cout << "You walk close to the front edge, where you see the entrance of the castle, the path you took from the city to here, the vast forest that stretches for miles, and far off, the ocean, such a large thing and you are surrounded by it, with no other way to communicate with the outside world except via boat, you gaze at it as the sun stops shining and hides behind the ocean top";
+  cout << "";
+  cout << "As you look down, you notice a torch along the path, it seems the king has returned, you should go confront him, you turn around, and quickly make your way downstairs";
+  break;
+  case 3:
+  cout << "You stare directly upwards, you see stars slowly appearing, as the sky slowly becomes dark";
+  if (player.getCType() == "chef") //heal 1
+  {
+    cout << "You remember all you have seen as of today, and start to wonder if the king is as trustworthy as he seems, you can't fully grasp it, you were not alive during the civil war, but you start to wonder what happened, what made the king fake who he is, and if that you should be serving him anymore, you shake that feeling off, and take a sigh, as you walk back downstairs";
+  }
+  if (player.getCType() == "maid")
+  {
+    cout << "You start to only focus your eyes on the appearing stars, they remember you of faces with no names, only that you know them, you think to yourself about all the bad things the king has been doing since the civil war, and you despise not quitting right then and there, you grit your teeth, remembering all of the executions you had to watch as examples for obedience, you know that if you fail, your head will end in a spike, but you're too far, you stomp your foot in rage, and make your way back down";
+  }
+  if (player.getCType() == "guard")
+  {
+    cout << "You watch the sky turn dark, and focus on how the stars above seem dim, your eyes feel heavy, you think about the king, the one who took you out of prison to do his evil deeds in the name of justice, your faith is shaken, your footing weakening, and your mind doesn't feel like yours, you remember your parents, the ones who looked after you, the ones who gave you your gauntlet, you know that this is far greater than you, and yet, you didn't stop, and kept going, you clutch your fist, and walk back downstairs";
+  }
   
+
+}
 }
 
 
