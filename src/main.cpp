@@ -37,6 +37,18 @@ class  Character{
   {
     return CType;
   }
+  void Heal(int amount)
+  {
+    Life = Life + amount;
+  }
+  void Damage (int amount)
+  {
+    Life = Life - amount;
+  }
+  int getLife()
+  {
+    return Life;
+  }
 };
 
 int main() {
@@ -44,6 +56,7 @@ int main() {
   string input;
   int classpick;
   int Intro;
+  int Life;
 
 cout << "It is the year 15XX, the king Dragokul has been calling to his castle lots and lots of clerics over for an unkown reason, when asked about it, he denies and turns the question around, you decide to investigate the motive of his actions, but, who are you? \n";
 cout << "I am a: Chef (1)" << endl;
@@ -98,6 +111,7 @@ switch(Intro)
   case 2: //Increases health by 1
   cout << "You stop the cleric dead in ikts tracks by grabbing him by the shoulder, he seems startled, as he turned around with a surprised expression, but quickly shoves you off \n";
   cout << "\n";
+  player.Heal(1);
   
 
   cout << "-May the Gods bless you-\n";
@@ -118,6 +132,7 @@ switch(Intro)
   {
     cout << "\n";
 cout << "You remember however, that there is a really sweet fruit that just arrived from a shipment that the king ordered to try out, it doesn't help in your current situation, but you located hidden at the bottom of a shelf, and you decide to eat one, its sweet and delicious!\n";
+player.Heal(1);
 break;
   }
   case 5:
@@ -133,6 +148,7 @@ if(player.getCType() == "guard") //heal 1
 {
   cout << "\n";
   cout << "As you check the crates of equipment, you are quick to find a sort of weapon polish balm in new state, you wonder for abit, and look around you, after abit, you open the balm and began to polish your gauntlet, making it shine againts the harsh light of the torches againts the wall, probably no o*ne will be using it anyway\n";
+  player.Heal(1);
 }
 break;
 case 6:
@@ -166,7 +182,9 @@ switch(Intro)
   cout << "\n";
   cout << "-Its a quiet day, there will not be much to do today, which is unusal, but hey, more freetime-\n";
   cout << "\n";
+
   cout << "He pats your back, and continues making his rounds, as for you, you continue your investigation\n";
+
   if (player.getCType() == "guard") // heal 1
   {
     cout << "You ask further before continuing, this time asking about where the king is\n";
@@ -174,6 +192,7 @@ switch(Intro)
     cout << "-Naturally, the right hand is worried about the body, he is currently walking around town to get the attenion of more clerics to come to the castle for auditioning-\n";
     cout << "\n";
     cout << "You try asking him that what are they auditioning for, but he simply shrugs before he returns to his rounds\n";
+    player.Heal(1);
   }
   break;
   case 4:
@@ -205,6 +224,7 @@ cout << "\n";
   if (player.getCType() == "chef") //heal 1
   {
     cout << "You use this opportunity to browse the new cooking equipment, you find a shiny new cooking knife with a stainless steel pan, you tell the maid if you could take it and she nods, as you leave your old weapons in the table\n";
+    player.Heal(1);
   }
   if (player.getCType() == "maid") // damage 1
   {
@@ -213,10 +233,12 @@ cout << "\n";
     cout << "-Now that i think of it, i think i may know something... i overheard from one of the other knights that the king is trying to sieze power of... something, i could no hear why, but the knights didn't look pleased with the conversation-\n";
     cout << "\n";
     cout << "She used this time to idly chatter to you about your topic, to which you learn something, as you finish the cleaning, the maid nods to you with a smile, as she startrs checking inventory, you let her be\n";
+    player.Damage(1);
   }
   if (player.getCType() == "guard") // heal 1
   {
     cout << "You sit across from the maid, as you pull your own polishing kit from your backpocket, she remains quiet, as she observed you clean your weapon diligently, once you finish, you vow and leave the room\n";
+    player.Heal(1);
   }
   break;
   case 3:
@@ -249,6 +271,7 @@ cout << "\n";
   if (player.getCType() == "chef") //damage 1
   {
     cout << "You remember entering here when you needed meat, as you open the metallic door, a cold chill washed over you instantly, you are unable to enter the cold storage, as it was unnaturaly cold, you quickly close the door, and shiver as you walk away\n";
+    player.Damage(1);
   }
   if (player.getCType() == "maid")
   {
@@ -261,6 +284,7 @@ cout << "\n";
   if (player.getCType() == "guard") //damgae 1
   {
 cout << "You open the door with confidense, as you walk in, the metal door closes behind you, as you begin to search all around as quickly as you could, you're unable to bear the cold for this long, so you rush outside, but before that, you managed to see what appeared to be, someones foot?\n";
+player.Damage(1);
   }
   break;
   case 5:
@@ -268,6 +292,7 @@ cout << "You open the door with confidense, as you walk in, the metal door close
   if (player.getCType() == "maid") //damage 1
   {
     cout << "You feel disgusted insatntly seeing the place, you uickly bring the utensils neccesarry to clean form the storage at the front, and begin to clean, you however, were too focused on cleaning, you didn't notice anything, and you feel quite tired\n";
+    player.Damage(1);
   }
   break;
 }
@@ -291,6 +316,7 @@ switch (Intro)
   if (player.getCType() == "maid") // damage 1
   {
     cout << "As you finish inspecting, your breathing becomes agitated, you remember a few years ago looking under the table, and seeing a butler crushed under rubble in this very room, you shake that feeling quickly, and walk out quickly\n";
+    player.Damage(1);
   }
   break;
   case 3:
@@ -298,6 +324,7 @@ switch (Intro)
   if (player.getCType() == "chef") // heal 1
   {
     cout << "You have good memories of this place, this is where you took the exam that allowed you to take this job, after all, you were here yesterday!, you leave the room with a big smile across your face\n";
+    player.Heal(1);
   }
   break;
   case 4:
@@ -347,12 +374,14 @@ switch (Intro)
   if (player.getCType() == "maid") //damage 1
   {
     cout << "As if you were not there, the priest keeps walking bacj and forth, ignoring what you told him\n";
+    player.Damage(1);
   }
   if (player.getCType() == "guard") // heal 1
   {
     cout << "-Huh?, oh, uhm, yes, of course, sorry for the trouble, i will be leaving inmeddiately...-\n";
     cout << "\n";
     cout << "He quickly vows towards your direction, and he walks rather quickly to the main gate\n";
+    player.Heal(1);
   }
   break;
 }
@@ -382,7 +411,8 @@ if (player.getCType() == "maid")
 }
 if (player.getCType() == "guard") //heal 1
 {
-  cout << "You walk closer to the bars of a cell, the prison stares at you with blood all over his mouth and broken nose, layingon the floor, wearing the same kind of armor as you, you stare down to him, and remind yourself of what had happened...herecy, but with all that is going on, you start to doubt yourself, you leave the room, making a nod at the priosn who you stared at\n";
+  cout << "You walk closer to the bars of a cell, the prison stares at you with blood all over his mouth and broken nose, laying on the floor, wearing the same kind of armor as you, you stare down to him, and remind yourself of what had happened...herecy, but with all that is going on, you start to doubt yourself, you leave the room, making a nod at the priosn who you stared at\n";
+  player.Heal(1);
 }
 break;
 case 3:
@@ -415,85 +445,216 @@ cin >> Intro;
 switch (Intro)
 {
   case 1:
-  cout << "You stare at the doors, while they are all different and they call your attention, you feel like watching the sundown";
+  cout << "You stare at the doors, while they are all different and they call your attention, you feel like watching the sundown\n";
   break;
   case 2:
-  cout << "When you open the door, it doesn't even creak, it seems well kept, as inside, you see why, it being non other than the king's bedroom, you can barely contain a smile, you think to yourself that in here out of all placed, you will find what you will need, or at least some lead to the investigation, the room has inside a big balcony with a glass door, a really big bed with yellow and red sheets and pillows, as well as a large carpet that fills the room, a couple bireal dressers and nightsands, itis a cozy room, but feels a bit overly riched out";
+  cout << "When you open the door, it doesn't even creak, it seems well kept, as inside, you see why, it being non other than the king's bedroom, you can barely contain a smile, you think to yourself that in here out of all placed, you will find what you will need, or at least some lead to the investigation, the room has inside a big balcony with a glass door, a really big bed with yellow and red sheets and pillows, as well as a large carpet that fills the room, a couple bireal dressers and nightsands, itis a cozy room, but feels a bit overly riched out\n";
   if (player.getCType() == "chef")
   {
-    cout << "What you find inside is that the king has been eating a lot, food carts are strewn about throughout all the room, with empty plates and glassess all over, what was he eating, you can't tell, but this is certainly not normal behaviour of the king";
+    cout << "What you find inside is that the king has been eating a lot, food carts are strewn about throughout all the room, with empty plates and glassess all over, what was he eating, you can't tell, but this is certainly not normal behaviour of the king\n";
   }
   if (player.getCType() == "maid")
   {
-    cout << "You are not the designated maid for this room, you think you know the one who was meant to clean this room, but the room is entirely a mess, however, you do know where someone would hide their secrets, you began to check under mattress, and you quickly find the secret you were expecting, it was a bag of a sort of purple dust, it smells poisonous... ";
+    cout << "You are not the designated maid for this room, you think you know the one who was meant to clean this room, but the room is entirely a mess, however, you do know where someone would hide their secrets, you began to check under mattress, and you quickly find the secret you were expecting, it was a bag of a sort of purple dust, it smells poisonous... \n";
   }
   if (player.getCType() == "guard")
   {
-    cout << "You look around the room really quickly, you have never been inside this room, usually outside of it, as you inspect everything in a quick manner, you probably missed somethings, but the thing you do find, was a couple notes inside a drawer that said something related to firing you ...today";
+    cout << "You look around the room really quickly, you have never been inside this room, usually outside of it, as you inspect everything in a quick manner, you probably missed somethings, but the thing you do find, was a couple notes inside a drawer that said something related to firing you ...today\n";
   }
   break;
   case 3:
-  cout << "As you open the old wooden door, it creaks loudly, so you just open it halfway, as you peek in between the door gap, you notice it looks like a cell for a child, it doesn't have any wooden walls like the others, no cute flooring, it simply had a wooden bed with hay, a filled toy box, and shackles on the wall with no windows, you're not quite sure what to make of this room, but could it be related to the prince's going missing";
+  cout << "As you open the old wooden door, it creaks loudly, so you just open it halfway, as you peek in between the door gap, you notice it looks like a cell for a child, it doesn't have any wooden walls like the others, no cute flooring, it simply had a wooden bed with hay, a filled toy box, and shackles on the wall with no windows, you're not quite sure what to make of this room, but could it be related to the prince's going missing\n";
   break;
   case 4:
-  cout << "Before you open the metal door, it opens on its own, and a woman with butcher clothing is there, holding a bloody bag";
-  cout << "";
-  cout << "-Screw off, im not serving clients at the moment, go see Terro at the first floor-";
-  cout << "";
-  cout << "She bumped into your shoulder with anger, as you look inside the room, it seems the room has a white porcelean for floor and walls, abut they are covered in blood, as well as a single bed thats oddly wiped clean, a desk and chair, as well as another metal door that's under a really big lock";
+  cout << "Before you open the metal door, it opens on its own, and a woman with butcher clothing is there, holding a bloody bag\n";
+  cout << "\n";
+  cout << "-Screw off, im not serving clients at the moment, go see Terro at the first floor-\n";
+  cout << "\n";
+  cout << "She bumped into your shoulder with anger, as you look inside the room, it seems the room has a white porcelean for floor and walls, abut they are covered in blood, as well as a single bed thats oddly wiped clean, a desk and chair, as well as another metal door that's under a really big lock\n";
   if (player.getCType() == "guard")
   {
-    cout << "You don't pay mind to her bumping into you, you just stare blankly at the empty bed, something about it still makes you feel uneasy";
+    cout << "You don't pay mind to her bumping into you, you just stare blankly at the empty bed, something about it still makes you feel uneasy\n";
   }
   break;
   case 5://damage to all 1
-  cout << "You peek through the cell bars to see whats behind, it's a giant gold pile sitting there, this must be the treasure room, further in, chests of all kinds and loot layed out free for the taking, you bump into the metal as you try to pen the door, it's locked";
+  cout << "You peek through the cell bars to see whats behind, it's a giant gold pile sitting there, this must be the treasure room, further in, chests of all kinds and loot layed out free for the taking, you bump into the metal as you try to pen the door, it's locked\n";
+  player.Damage(1);
   break;
   }
 
-  cout << "You go upstairs, it is a closed off space with a spiraling staricase as if of a tower, as you walk up the stone staircase, you are met with another door, this one of wood, you open it, and are presented with a beautiful orange and black sky, as night is coming in";
-  cout << "";
-  cout << "Go back down to the throne room (1)";
-  cout << "Go close to the edge (2)";
-  cout << "Watch the sky turn dark (3)";
+  cout << "You go upstairs, it is a closed off space with a spiraling staricase as if of a tower, as you walk up the stone staircase, you are met with another door, this one of wood, you open it, and are presented with a beautiful orange and black sky, as night is coming in\n";
+  cout << "\n";
+  cout << "Go back down to the throne room (1)\n";
+  cout << "Go close to the edge (2)\n";
+  cout << "Watch the sky turn dark (3)\n";
   cin.clear();
 cin >> Intro;
 
 switch (Intro)
 {
   case 1:
-  cout << "You take a deep breath, you needed some fresh air after all the walking you have been doing nearly non stop, you exhale, and begin to make your way back";
+  cout << "You take a deep breath, you needed some fresh air after all the walking you have been doing nearly non stop, you exhale, and begin to make your way back\n";
   break;
   case 2: 
-  cout << "You walk close to the front edge, where you see the entrance of the castle, the path you took from the city to here, the vast forest that stretches for miles, and far off, the ocean, such a large thing and you are surrounded by it, with no other way to communicate with the outside world except via boat, you gaze at it as the sun stops shining and hides behind the ocean top";
-  cout << "";
-  cout << "As you look down, you notice a torch along the path, it seems the king has returned, you should go confront him, you turn around, and quickly make your way downstairs";
+  cout << "You walk close to the front edge, where you see the entrance of the castle, the path you took from the city to here, the vast forest that stretches for miles, and far off, the ocean, such a large thing and you are surrounded by it, with no other way to communicate with the outside world except via boat, you gaze at it as the sun stops shining and hides behind the ocean top\n";
+  cout << "\n";
+  cout << "As you look down, you notice a torch along the path, it seems the king has returned, you should go confront him, you turn around, and quickly make your way downstairs\n";
   break;
   case 3:
-  cout << "You stare directly upwards, you see stars slowly appearing, as the sky slowly becomes dark";
+  cout << "You stare directly upwards, you see stars slowly appearing, as the sky slowly becomes dark\n";
   if (player.getCType() == "chef") //heal 1
   {
-    cout << "You remember all you have seen as of today, and start to wonder if the king is as trustworthy as he seems, you can't fully grasp it, you were not alive during the civil war, but you start to wonder what happened, what made the king fake who he is, and if that you should be serving him anymore, you shake that feeling off, and take a sigh, as you walk back downstairs";
+    cout << "You remember all you have seen as of today, and start to wonder if the king is as trustworthy as he seems, you can't fully grasp it, you were not alive during the civil war, but you start to wonder what happened, what made the king fake who he is, and if that you should be serving him anymore, you shake that feeling off, and take a sigh, as you walk back downstairs\n";
+    player.Heal(1);
   }
   if (player.getCType() == "maid")
   {
-    cout << "You start to only focus your eyes on the appearing stars, they remember you of faces with no names, only that you know them, you think to yourself about all the bad things the king has been doing since the civil war, and you despise not quitting right then and there, you grit your teeth, remembering all of the executions you had to watch as examples for obedience, you know that if you fail, your head will end in a spike, but you're too far, you stomp your foot in rage, and make your way back down";
+    cout << "You start to only focus your eyes on the appearing stars, they remember you of faces with no names, only that you know them, you think to yourself about all the bad things the king has been doing since the civil war, and you despise not quitting right then and there, you grit your teeth, remembering all of the executions you had to watch as examples for obedience, you know that if you fail, your head will end in a spike, but you're too far, you stomp your foot in rage, and make your way back down\n";
   }
   if (player.getCType() == "guard")
   {
-    cout << "You watch the sky turn dark, and focus on how the stars above seem dim, your eyes feel heavy, you think about the king, the one who took you out of prison to do his evil deeds in the name of justice, your faith is shaken, your footing weakening, and your mind doesn't feel like yours, you remember your parents, the ones who looked after you, the ones who gave you your gauntlet, you know that this is far greater than you, and yet, you didn't stop, and kept going, you clutch your fist, and walk back downstairs";
+    cout << "You watch the sky turn dark, and focus on how the stars above seem dim, your eyes feel heavy, you think about the king, the one who took you out of prison to do his evil deeds in the name of justice, your faith is shaken, your footing weakening, and your mind doesn't feel like yours, you remember your parents, the ones who looked after you, the ones who gave you your gauntlet, you know that this is far greater than you, and yet, you didn't stop, and kept going, you clutch your fist, and walk back downstairs\n";
   }
+}
   
+  cout << "you make your way all the way to the throne room as quickly as you could, as you don't encounter anyone on your path, you arrive, nd see  sight that would sicken you to your core\n";
+  cout << "\n";
+  cout << "The king, sitting on his throne, watching as a perosn in puprle robes draws a pentagaram using a purple powder in the midle of the room. you watch with fear as the king hs an evil grin across his beared face, laughing and chuckling ocassionally as his mind fills with thoughts, he quickly notices you peeking from a side\n";
+  cout << "\n";
+  if (player.getCType() == "chef")
+  {
+    cout << "-Ahh, you are here from yesterday, yes?, my new royal cook, worthy of such a title!, i was expecting you'd come, but not stay this late!, say, why don't you stay?, you are about to witness something magnficient, and then, let us have that banuet i promised you, with your delicious star dish-\n";
+  }
+  if (player.getCType() == "maid")
+  {
+    cout << "-Oh?, what do you think you are doing here?, this is the throne room, nd you are not allowed here unless i am not in the room!, i should fire you, but it doesn't matter anymore, for you would soon learn your place-\n";
+  }
+  if (player.getCType() == "guard")
+  {
+    cout << "-Welcome welcome, i was hoping you'd come, my right hand, stay please, i wanted you to see the show before it began, as my most priced knight, this is the biggest honor i could ever bestow upon you-\n";
+  }
+cout << "\n";
+cout << "As he said those words, the purpled robed person began to chant something while flailing it's arms near a book, as the pentagram began to grow purple, the grin in the kings face grew larger\n";
+cout << "\n";
+cout << "Leave the castle (1)\n";
+cout << "Stop the person chanting (2)\n";
+cout << "Ask the king what's happening (3)\n";
+cout << "Confront the king (4)\n";
+  cin.clear();
+cin >> Intro;
 
+switch (Intro)
+{
+  case 1:
+  cout << "You sprint quickly across the room, and head to the main gate, as you put your shoudler to open it, it won't budge, you try and try, but are unable to escape the castle\n";
+  break;
+  case 2:
+  cout << "You run towards the robed figure, as you hear the king yell at you to stop, you tackle with your arms and shoulder the robed figure, they were frail and weak, so they did not pose any threat, but the pentagram kept glowing, as you stand up, you watch the scene unfold despite your effort\n";
+  break;
+  case 3:
+  cout << "You yell at the king your question, to which he laughs and turns around to talk to you, a madmans face imprinted on his\n";
+  cout << "\n";
+  cout << "-Something that will change the course of history for the next 1000 years and more to come!, the overwhelming power that i truly deserve!-\n";
+  break;
+  case 4:
+  if (player.getCType() == "chef")
+  {
+    cout << "You tell the king about your concerns over his health, that he may be taking this too far, and that he should call this off, you did not come here to witness anything like this, and that you just came here to cook for him and the others\n";
+    cout << "\n";
+    cout << "-Poor fellow aren't you?, it shall not mater, for you will still serve the porpuse i gave into you, but now, with the power to accomplish it, nothing will stop me!-\n";
+  }
+  if (player.getCType() == "maid")
+  {
+    cout << "You yell at the king about all the bad things he has done towards his own people of his kingdom, and that he shamelessly makes people like you suffer for no reason, or just his amusement, you tell her about all the ones on your line of work that died just because of his stupid decisions and unawareness to what the people really need, a real ruler\n";
+    cout << "\n";
+    cout << "The king growls at you, gritting his teeth, as he turns to face you\n";
+    cout << "\n";
+    cout << "-And you will, you ungrateful bastard, you will, and i will show everyone, what it truly menas to lead, something you probably don't know even the slightiest bit of-\n";
+  }
+  if (player.getCType() == "guard")
+  {
+    cout << "You told the king that this wasn't the reason he agreed to the deal, that you are not gonna be his puppet anymore, and that you will follow what is true justice, and that if that meant killing him, you would gladly do so, for this is what you truly stand for, and what he should've stand for\n";
+    cout << "\n";
+    cout << "-It is truly a shame you cannot grasp the size of the situation, i had high hopes for you in the new world i will create, but maybe you were always destined to sink at the bottom with your parents-\n";
+    break;
+  }
 }
+
+  cout << "From the circle a light emerged, and a form arised from it, a giant skeleton with it's skull cracked from his left side, it placed it's bony arms onto the ground, and aproached the king with its hollow skull, the robed figure, watching calmly behind the skeleton, as you take a few steps back\n";
+  cout << "\n";
+  cout << "-I am Tarnished, ruler of the first ring of hell, Wrath, my chosen Lara has requested that i grant you 1 wish, in exchange of hers, so tell me, Dragokul, what is it you wish for?-\n";
+  cout << "\n";
+  cout << "The skeleton spoke, looming all of you, nearly breaking the roof with his mere size, as the king stood up, letting his red cape flow through with the wind coming from the breaths of Tarnished\n";
+  cout << "\n";
+  cout << "-Power, power beyond measure without limit, enough to conquer the planet, and rival the gods themselve,s the power for the mere island to be a threat to the entire world, and all for me to manage from the shadows-\n";
+  cout << "\n";
+  cout << "the king exclaimed, as Tarnished beared a grin, he snapped his fingers, as he moved upwards, breaking through the roof, a purple smoke filled the air, as you looked down, the robed figure was nowhere to be seen, the king, laughing, began to look at his body, it was decomposing, his skin and flesh melting away through the smoke, as soon, his skeleton landed on his throne, Tarnished began to laugh, as he then looked down to you, noticing you were there\n";
+  cout << "\n";
+  cout << "-Well well, a little servant i assume?, i see you lack the power, i shall grant it to you, for now i shall be taking over the king, and thus, making you part of my army\n";
+  cout << "\n";
+  if (player.getCType() == "chef")
+  {
+    if (player.getLife() >= 10)
+    {
+      cout << "Tarnished shrinks down to human size, as he draws from out of nowhere a pair of cooking knives, and throws them at you, you managed to deflect one, but the other one stabs you in the eye, you hold your eye as tight as you could, as you began to run away, you bump into gates, and now they open, you run away from the castle, not followed by anyone, aas it becomes hard for you to see clearly, you see a looming purple cloud begin to spread all through the island\n";
+      cout << "\n";
+      cout << "Your fate remains uncertain, what unfolded was the descturction of civilization as we know it, the dead rising up and attacking people, converting them into their unending army, but you will press on, whatever it takes\n";
+      cout << "\n";
+      cout << "Ending 2: The royal chef\n";
+      return 0;
+    }
+    if (player.getLife() < 10 )
+    {
+      cout << "Tarnished shrinks down to human size, as he draws out of nowhere a pair of of cooking knives, he throws both of them at you, in shock of the sudden transformation, you were not able to react, you feel both of your eyes get stabbed at the same time, as you yell and stumble in pain, a bone foot is placed on your abdomen, and suddenly, both of your eyes and pluckered out, you go blind instantly, and you fall to your side, dying a quick and painful death\n";
+      cout << "\n";
+      cout << "Ending 1: The tarnished general\n";
+      return 0;
+    }
+}
+if (player.getCType() == "maid")
+{
+  if (player.getLife() >= 10)
+  {
+    cout << "Tarnished shrinks down to human size, as he pulls from thin air out a sword, as he lashes at you, you get cut across your belly, you begin to bleed out, but you are not dead, Tarnished laughs at you, you stand up quickly and begin to run away, the door opens quickly as you bash into it, leaving a trail of blood, you look behind you, and see a looming purple cloud start to cover the whole island\n";
+    cout << "\n";
+    cout << "Your fate remains uncertain, what unfolded was the descturction of civilization as we know it, the dead rising up and attacking people, converting them into their unending army, but you will press on, whatever it takes\n";
+    cout << "\n";
+    cout << "Ending 3: The last maid\n";
+    return 0;
+  }
+  if (player.getLife() < 10)
+  {
+    cout << "Tarnished shrinks down to human size, as he pull from thin air out a sword, as he lashes at you, you get cut across your belly and back, swiftly cutting you in half from the waist, as your torso falls down to the floor, your legs shortly follow, you stop feeling anything at all, and quickly die a painless death\n";
+    cout << "\n";
+    cout << "Ending 1: The tarnished general\n";
+    return 0;
+  }
+}
+if (player.getCType() == "guard")
+{
+  if (player.getLife() >= 10)
+  {
+    cout << "Tarnished shrinks down to human size, as he summons from nowhere a spear, he throws it at you at inhuman speeds, you put your hand up to block the spear, the spear pierces through your gauntlet and sticks out from your shoulder, you take heavy breaths, as you look at Tarnished dead into his eyes, barely able to keep your footing\n";
+    cout << "\n";
+    cout << "-You know that fighting me in this state won't amount to anything, you would be dying a meaningless death, leave, and amount an amount of strenght worth my time, chosen of the gods-\n";
+    cout << "\n";
+    cout << "You take the words to heart, and after some thinking, you stand up and limp your way outside, in a last act of mocking, Tarnished opened the gates for you, as you walk outside, you take a few steps, and look back, a purple cloud looming over the island, soon to cover it in its entirety\n";
+    cout << "\n";
+    cout << "Your fate remains uncertain, what unfolded was the descturction of civilization as we know it, the dead rising up and attacking people, converting them into their unending army, but you will press on, whatever it takes\n";
+    cout << "\n";
+    cout << "Ending 4: The right hand\n";
+    return 0;
+    }
+  if (player.getLife() < 10)
+  {
+    cout << "Tarnished shrinks down to human size, as he summons from nowhere a spear, he throws it at you at inhuman speeds, you put you hand up to block the spear, the spear pierces tyhrough your gauntlet and stick out from your shoudler, piercing your arm entirely, you take heavy breaths, you,re feeling dizzy, you stare at Tarnished hollowed skull as he laughed at you, you fall on your belly, and you soon die, a painful yet slow death\n";
+    cout << "";
+    cout << "Ending 1: the tarnished general\n";
+    return 0;
+  }
 }
 
-
-
-
-
-
-  while (true) {
+while (true) {
     getline(cin, input);  // Lee una línea de input
     if (input == "Exit") {
       break; // Salir del bucle si el input es "Exit"
